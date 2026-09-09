@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-paper text-ink font-body;
+}
+
+.vitals-strip {
+  height: 3px;
+  background-image: repeating-linear-gradient(
+    90deg,
+    theme('colors.clinical') 0px,
+    theme('colors.clinical') 2px,
+    transparent 2px,
+    transparent 4px,
+    theme('colors.gold') 4px,
+    theme('colors.gold') 6px,
+    transparent 6px,
+    transparent 40px
+  );
+}
+
+.card {
+  @apply bg-white border border-ink/10 rounded-md shadow-sm;
+}
+
+.btn-primary {
+  @apply bg-clinical text-white px-4 py-2 rounded-md font-medium hover:bg-ink transition-colors;
+}
+
+.btn-secondary {
+  @apply bg-transparent border border-clinical text-clinical px-4 py-2 rounded-md font-medium hover:bg-clinical hover:text-white transition-colors;
+}
+
+.input-field {
+  @apply w-full border border-ink/20 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-clinical/40 focus:border-clinical;
+}
+
+.label-eyebrow {
+  @apply text-xs font-mono uppercase tracking-widest text-clinical/80;
+}
